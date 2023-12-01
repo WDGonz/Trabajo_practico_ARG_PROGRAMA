@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Pagamos Cooperativa - Pagos de Seguro</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>No Pagamos Cooperativa - Pagos de Seguro</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Solicitar un Contacto</h2>
+            <p>Complete el siguiente formulario y un asesor se pondrá en contacto con usted a la brevedad.</p>
+            
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="tipo-seguro">Tipo de Seguro:</label>
+                <select id="tipo-seguro" name="tipo-seguro" required>
+                    <option value="">Seleccione un tipo de seguro</option>
+                    <option value="basico">Básico</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="premium">Premium</option>
+                </select>
+                
+                <p>Valor del Seguro: <span id="valor-seguro">$0</span></p>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            
+            <div id="popup-success" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <p>Solicitud ingresada de forma exitosa.</p>
+                    <button id="close-popup-success">Cerrar</button>
+                </div>
+            </div>
+            
+            <div id="popup-error" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <p>Por favor, complete todos los campos correctamente.</p>
+                    <button id="close-popup-error">Cerrar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 No Pagamos Cooperativa - Pagos de Seguro</p>
+    </footer>
+
+    <script src="Formulario.js"></script>
+</body>
+</html>
